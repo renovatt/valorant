@@ -3,9 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --bg-default: #151929;
 }
 
 *{
@@ -54,6 +52,16 @@ body {
   }
 }
 
+@layer utilities{
+  .bg-gradient-container{
+    background: linear-gradient(
+    45deg, 
+    rgba(31,35,51,1) 31%, 
+    rgba(80,80,91,0.7932422969187676) 100%
+    );
+  }
+}
+
 html{
   @media(max-width:1080px){
       font-size:93.75%;
@@ -68,5 +76,5 @@ html{
 }
 
 body {
-  background: #fff;
+  background: var(--bg-default);
 }
