@@ -9,3 +9,15 @@ export type RouteLinksProps = {
   href: string
   icon: ElementType
 }
+
+export type TitleProps = {
+  title: string
+}
+
+export type ViewContainerProps = {
+  children: ReactNode
+}
+
+export type ViewContentProps = {
+  children: ReactNode
+}
