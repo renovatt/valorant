@@ -1,3 +1,5 @@
+import AgentsPage from '@/app/components/AgentsPage'
+
 export default function Agents() {
-  return <h2 className="text-white">Agentes</h2>
+  return <AgentsPage />
 }
