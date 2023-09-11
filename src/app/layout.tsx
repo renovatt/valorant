@@ -3,6 +3,14 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Container from './components/Container'
 import Header from './components/Header'
+import ReactQueryProvider from './components/Providers/ReactQueryProvider'
+// import localFont from 'next/font/local'
+
+// const myFont = localFont({
+//   src: '/valorant.ttf',
+//   display: 'swap',
+//   variable: '--font-valorant',
+// })
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,10 +27,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Container>
-          <Header />
-          {children}
-        </Container>
+        <ReactQueryProvider>
+          <Container>
+            <Header />
+            {children}
+          </Container>
+        </ReactQueryProvider>
       </body>
     </html>
   )
