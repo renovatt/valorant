@@ -77,3 +77,4 @@ export interface Agent {
 }
 
 export type AgentsCardProps = Partial<Agent>
+export type AgentModal = Partial<Agent>
