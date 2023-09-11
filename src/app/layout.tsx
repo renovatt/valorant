@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import Container from './components/Container'
 import Header from './components/Header'
 import ReactQueryProvider from './components/Providers/ReactQueryProvider'
+import { AosProvider } from './components/Providers/AosProvider'
 // import localFont from 'next/font/local'
 
 // const myFont = localFont({
@@ -28,10 +29,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ReactQueryProvider>
-          <Container>
-            <Header />
-            {children}
-          </Container>
+          <AosProvider>
+            <Container>
+              <Header />
+              {children}
+            </Container>
+          </AosProvider>
         </ReactQueryProvider>
       </body>
     </html>
