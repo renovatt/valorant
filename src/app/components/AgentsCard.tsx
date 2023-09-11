@@ -1,10 +1,13 @@
+'use client'
 import Image from 'next/image'
 import { AgentsCardProps } from '@/@types'
+import { useRouter } from 'next/navigation'
 
 const AgentsCard = ({
   displayName,
   abilities,
   fullPortrait,
+  uuid,
 }: AgentsCardProps) => {
   const backgroundImageUrl = '/bg-card.png'
   const sectionStyle = {
@@ -13,8 +16,17 @@ const AgentsCard = ({
     backgroundReteat: 'no-repeat',
     backgroundPosition: 'center',
   }
+
+  const router = useRouter()
+  const handleAgentsById = (uuid: string) => {
+    router.push(`/views/agent/${uuid}`)
+  }
+
   return (
-    <section className="bg-gradient-card relative mx-2 my-8 flex h-48 w-32 items-center justify-end border-2 border-primary-700 bg-opacity-50  p-[2px] hover:cursor-pointer md:my-6 md:h-52 md:w-36">
+    <section
+      onClick={() => handleAgentsById(uuid ?? '')}
+      className="bg-gradient-card relative mx-2 my-8 flex h-48 w-32 items-center justify-end border-2 border-primary-700 bg-opacity-50  p-[2px] hover:cursor-pointer md:my-6 md:h-52 md:w-36"
+    >
       <div
         style={sectionStyle}
         className="absolute bottom-0 h-full w-full opacity-20"
