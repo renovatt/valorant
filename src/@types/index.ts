@@ -26,6 +26,14 @@ export type ReactQueryProviderProps = {
   children: ReactNode
 }
 
+export type ModalContainerProps = {
+  children: ReactNode
+}
+
+export type AOSProviderProps = {
+  children: React.ReactNode
+}
+
 export interface Role {
   uuid: string
   displayName: string
@@ -77,4 +85,21 @@ export interface Agent {
 }
 
 export type AgentsCardProps = Partial<Agent>
-export type AgentModal = Partial<Agent>
+export type AgentModalProps = Partial<Agent>
+export type DesktopModalProps = Partial<Agent>
+export type MobileModalProps = Partial<Agent>
+
+type UseStoreState = {
+  status: {
+    isDefault: boolean
+    isHovered: boolean
+    skillName: string
+  }
+}
+
+type UseStoreActions = {
+  setStatus: (skillId: string) => void
+  clearStatus: () => void
+}
+
+export type UseStoreProps = UseStoreState & UseStoreActions
