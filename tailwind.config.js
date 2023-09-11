@@ -16,9 +16,13 @@ module.exports = {
         primary: {
           900: '#1f2333',
           800: '#818aa5',
+          700: '#ff3e48',
           DEFAULT: '#151929',
         },
       },
+    },
+    fontFamily: {
+      valorant: ['var(--font-valorant)'],
     },
   },
   plugins: [],

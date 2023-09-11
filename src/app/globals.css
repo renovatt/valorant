@@ -17,12 +17,10 @@
 }
 
 ::-webkit-scrollbar-track{
-  /* background-color: var(--background-secondary); */
   background: transparent;
 }
 
 ::-webkit-scrollbar-thumb{
-  /* background: var(--background-primary); */
   background: transparent;
 }
 
@@ -60,6 +58,19 @@ body {
     rgba(80,80,91,0.7932422969187676) 100%
     );
   }
+
+  .bg-gradient-card {
+    background: linear-gradient(
+    0deg, rgba(255,62,72,1) 
+    12%, rgba(255,255,255,0) 
+    71%, rgba(255,255,255,0) 100%
+    );
+  }
+
+  .bg-gradient-card-bottom{
+    background: linear-gradient(
+      0deg, rgba(0,0,0,0.3226540616246498) 0%, rgba(255,255,255,0) 45%);
+    }
 }
 
 html{
