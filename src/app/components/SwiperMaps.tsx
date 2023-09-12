@@ -10,10 +10,7 @@ const SwiperMaps = () => {
     <>
       {isLoading && <p className="text-white">Carregando..</p>}
       {isError && <p className="text-white">Aconteceu algum erro!</p>}
-      <section
-        data-aos="zoom-in"
-        className="m-auto flex w-full flex-col items-center justify-center px-4 md:h-full"
-      >
+      <section className="animate__fadeIn animate__animated m-auto flex w-full flex-col items-center justify-center px-4 md:h-full">
         <Swiper
           grabCursor={true}
           centeredSlides={true}

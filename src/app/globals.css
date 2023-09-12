@@ -87,6 +87,10 @@ body {
 
   .bg-gradient-weapon-card{
     background: linear-gradient(283deg, rgba(28,29,26,0.9149159663865546) 0%, rgba(41,42,39,0.9401260504201681) 100%);
+    /*
+    background: linear-gradient(
+      23deg, rgba(255,62,72,0.7272408963585435) 0%, rgba(28,29,26,0.7216386554621849) 53%);
+    */
   }
 }
 

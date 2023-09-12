@@ -10,7 +10,7 @@ const WeaponsCard = ({
   shopData,
 }: WeaponsCardProps) => {
   return (
-    <section className="bg-gradient-weapon-card relative m-2 flex h-44 w-72 items-center justify-center rounded-lg p-1 md:h-52 md:w-96">
+    <section className="animate__animated animate__fadeIn  bg-gradient-weapon-card relative m-2 flex h-44 w-72 items-center justify-center rounded-lg p-1 md:h-52 md:w-96">
       {/* <div className="absolute left-10 z-10 h-20 w-20 rounded-full border-2 md:left-24 md:h-28 md:w-28 md:border-4"></div> */}
 
       <article className="relative flex h-full w-full items-center justify-between p-2">

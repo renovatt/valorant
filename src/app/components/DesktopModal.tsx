@@ -45,7 +45,7 @@ const DesktopModal = ({
         <section className="flex h-full w-[30%] items-center justify-center">
           <figure className="pointer-events-none absolute -bottom-16 -left-32 z-50 flex h-[35rem] w-96 items-start justify-start">
             <Image
-              className="animate-fadeRight h-full w-full object-cover"
+              className="h-full w-full animate-fadeRight object-cover"
               src={fullPortrait ?? ''}
               alt={displayName ?? ''}
               width={1000}
