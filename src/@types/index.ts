@@ -84,11 +84,6 @@ export interface Agent {
   voiceLine: VoiceLine
 }
 
-export type AgentsCardProps = Partial<Agent>
-export type AgentModalProps = Partial<Agent>
-export type DesktopModalProps = Partial<Agent>
-export type MobileModalProps = Partial<Agent>
-
 type UseStoreState = {
   status: {
     isDefault: boolean
@@ -201,3 +196,9 @@ export interface Weapons {
   shopData: ShopData
   skins: Skin[]
 }
+
+export type AgentsCardProps = Partial<Agent>
+export type WeaponsCardProps = Partial<Weapons>
+export type AgentModalProps = Partial<Agent>
+export type DesktopModalProps = Partial<Agent>
+export type MobileModalProps = Partial<Agent>
