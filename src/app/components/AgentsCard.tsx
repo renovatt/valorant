@@ -25,7 +25,7 @@ const AgentsCard = ({
   return (
     <section
       onClick={() => handleAgentsById(uuid ?? '')}
-      className="bg-gradient-card relative mx-2 my-8 flex h-48 w-32 items-center justify-end border-2 border-primary-700 bg-opacity-50  p-[2px] hover:cursor-pointer md:my-6 md:h-52 md:w-36"
+      className="bg-gradient-card relative mx-2 my-8 flex h-48 w-32 items-center justify-end border-2 border-primary-700 bg-opacity-50 p-[2px] hover:cursor-pointer md:my-6 md:h-52 md:w-36"
     >
       <div
         style={sectionStyle}
@@ -47,7 +47,7 @@ const AgentsCard = ({
           className="pointer-events-none absolute z-50 flex h-full
        w-full flex-col items-center justify-end pb-3"
         >
-          <h1 className="my-1 text-base font-semibold uppercase text-white shadow-black drop-shadow-lg lg:text-2xl">
+          <h1 className="my-1 text-base font-semibold uppercase text-white shadow-black drop-shadow-lg lg:text-xl">
             {displayName}
           </h1>
           <section className="flex items-center justify-normal gap-3">

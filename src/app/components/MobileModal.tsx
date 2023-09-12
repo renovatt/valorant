@@ -106,11 +106,11 @@ const MobileModal = ({
 
       <section
         data-aos="fade-up"
-        className="bg-primary-650 z-40 flex h-full w-full items-start justify-center gap-4 overflow-y-scroll rounded-b-lg"
+        className="z-40 flex h-full w-full items-start justify-center gap-4 overflow-y-scroll rounded-b-lg bg-primary-650"
       >
         <article className="flex flex-col items-start justify-start rounded-b-lg p-2">
           <h3 className="my-2 uppercase text-white">{'//'}Biografia</h3>
-          <p className="text-primary-450 my-2 text-xs">{description}</p>
+          <p className="my-2 text-xs text-primary-450">{description}</p>
           <h3 className="my-2 uppercase text-white">{'//'}Habilidades</h3>
 
           <section className="flex h-full w-full flex-col items-start justify-start gap-2">
@@ -122,10 +122,10 @@ const MobileModal = ({
                     onClick={() => toggleAbilityDescription(index)}
                     className={`${
                       activeAbilityIndex === index ? 'h-full' : 'h-16'
-                    } bg-primary-400 my-1 flex min-h-[5rem] w-full flex-col items-start justify-center rounded-lg p-2 shadow-lg`}
+                    } my-1 flex min-h-[5rem] w-full flex-col items-start justify-center rounded-lg bg-primary-400 p-2 shadow-lg`}
                   >
                     <div className="flex items-center justify-center">
-                      <figure className="bg-primary-550 mr-1 flex h-14 w-20 items-center justify-center rounded-md p-1">
+                      <figure className="mr-1 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-550 p-1">
                         <Image
                           src={abilities.displayIcon}
                           alt={displayName ?? ''}
@@ -135,16 +135,13 @@ const MobileModal = ({
                         />
                       </figure>
 
-                      <div className="flex w-full flex-col items-start justify-center px-2">
-                        <h1 className="font-semibold uppercase text-white">
-                          {abilities.displayName}
-                        </h1>
-                      </div>
+                      <h1 className="ml-1 text-xs font-semibold uppercase text-white">
+                        {abilities.displayName}
+                      </h1>
                     </div>
                     {activeAbilityIndex === index && (
                       <p
-                        data-aos="fade-down"
-                        className={`animate-fade text-primary-450 my-4 px-2 text-xs ${
+                        className={`my-4 animate-fade px-2 text-xs text-primary-450 ${
                           activeAbilityIndex === index ? 'flex' : 'hidden'
                         }`}
                       >
