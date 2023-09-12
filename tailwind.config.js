@@ -41,9 +41,20 @@ module.exports = {
           transform: 'translateY(0px)',
         },
       },
+      fadeRight: {
+        from: {
+          opacity: '0',
+          transform: 'translateX(-20px)',
+        },
+        to: {
+          opacity: '1',
+          transform: 'translateX(0px)',
+        },
+      },
     },
     animation: {
       fade: 'fade .2s forwards',
+      fadeRight: 'fadeRight .6s forwards',
     },
   },
   plugins: [],
