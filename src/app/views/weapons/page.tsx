@@ -1,3 +1,5 @@
+import WeaponsPage from '@/app/components/WeaponsPage'
+
 export default function Weapons() {
-  return <h2 className="text-white">Armas</h2>
+  return <WeaponsPage />
 }
