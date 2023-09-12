@@ -18,13 +18,32 @@ module.exports = {
           800: '#818aa5',
           700: '#ff3e48',
           600: '#0c1d2c',
+          650: '#0f1923',
           500: '#0c2d39',
+          550: '#1b2a3d',
+          400: '#14212e',
+          450: '#50575e',
           DEFAULT: '#151929',
         },
       },
     },
     fontFamily: {
       valorant: ['var(--font-valorant)'],
+    },
+    keyframes: {
+      fade: {
+        from: {
+          opacity: '0',
+          transform: 'translateY(-20px)',
+        },
+        to: {
+          opacity: '1',
+          transform: 'translateY(0px)',
+        },
+      },
+    },
+    animation: {
+      fade: 'fade .2s forwards',
     },
   },
   plugins: [],
