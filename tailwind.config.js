@@ -25,6 +25,10 @@ module.exports = {
           450: '#50575e',
           DEFAULT: '#151929',
         },
+        secondary: {
+          450: '#1c1d1a',
+          DEFAULT: '#272827',
+        },
       },
     },
     fontFamily: {
