@@ -1,3 +1,5 @@
+import MapsPage from '@/app/components/MapsPage'
+
 export default function Maps() {
-  return <h2 className="text-white">Mapas</h2>
+  return <MapsPage />
 }
