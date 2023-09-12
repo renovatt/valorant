@@ -12,7 +12,7 @@ const SwiperMaps = () => {
       {isError && <p className="text-white">Aconteceu algum erro!</p>}
       <section
         data-aos="zoom-in"
-        className="m-auto flex h-full w-full flex-col items-center justify-center px-4 md:h-full"
+        className="m-auto flex w-full flex-col items-center justify-center px-4 md:h-full"
       >
         <Swiper
           grabCursor={true}
