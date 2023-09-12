@@ -24,7 +24,7 @@ const AgentModal = ({
     <ModalContainer>
       <TiArrowBackOutline
         onClick={backToAgents}
-        className="absolute right-5 top-4 h-7 w-7 text-white transition-all ease-in hover:cursor-pointer hover:text-primary-700"
+        className="absolute right-5 top-4 hidden h-7 w-7 text-white transition-all ease-in hover:cursor-pointer hover:text-primary-700 lg:flex"
       />
       <DesktopModal
         abilities={abilities}

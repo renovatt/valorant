@@ -47,7 +47,7 @@ const AgentsCard = ({
           className="pointer-events-none absolute z-50 flex h-full
        w-full flex-col items-center justify-end pb-3"
         >
-          <h1 className="my-1 text-2xl font-semibold uppercase text-white shadow-black drop-shadow-lg">
+          <h1 className="my-1 text-base font-semibold uppercase text-white shadow-black drop-shadow-lg lg:text-2xl">
             {displayName}
           </h1>
           <section className="flex items-center justify-normal gap-3">
