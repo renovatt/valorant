@@ -103,3 +103,12 @@ type UseStoreActions = {
 }
 
 export type UseStoreProps = UseStoreState & UseStoreActions
+
+export interface Maps {
+  uuid: string
+  displayName: string
+  coordinates: string
+  displayIcon: string
+  listViewIcon: string
+  splash: string
+}
