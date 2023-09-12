@@ -1,4 +1,5 @@
 import './globals.css'
+import 'animate.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Container from './components/Container'
