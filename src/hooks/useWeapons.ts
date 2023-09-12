@@ -1,8 +1,9 @@
+import { Weapons } from '@/@types'
 import { handleGetWeapons } from '@/services'
 import { useQuery } from '@tanstack/react-query'
 
 export const useWeapons = () => {
-  const { data, isLoading, error, isError } = useQuery({
+  const { data, isLoading, error, isError } = useQuery<Weapons[]>({
     queryKey: ['weapons'],
     queryFn: () => handleGetWeapons(),
   })
