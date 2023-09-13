@@ -38,8 +38,7 @@ const SwiperMaps = () => {
                     width={1000}
                     height={1000}
                     priority
-                    className="block object-cover 
-                          "
+                    className="block object-cover"
                   />
                   <aside className="absolute bottom-2 left-2 block lg:bottom-10">
                     <h1
