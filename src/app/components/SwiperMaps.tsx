@@ -15,7 +15,7 @@ const SwiperMaps = () => {
       {isLoading ? (
         <Loader />
       ) : (
-        <section className="animate__fadeIn animate__animated m-auto flex w-full flex-col items-center justify-center px-4 md:h-full">
+        <section className="animate__fadeIn animate__animated flex h-full w-[80%] items-center justify-center md:h-full">
           <Swiper
             grabCursor={true}
             centeredSlides={true}
@@ -24,26 +24,26 @@ const SwiperMaps = () => {
             navigation={true}
             pagination={{ el: '.swiper-pagination', clickable: true }}
             modules={[EffectCoverflow, Pagination, Navigation]}
-            className="h-full w-full"
+            className="h-full w-full rounded-lg"
           >
             {data?.map((map) => (
               <SwiperSlide
                 key={map.uuid}
-                className="flex items-center justify-center"
+                className="flex h-full w-full items-center justify-center"
               >
-                <figure className="relative flex items-center justify-center">
+                <figure className="relative flex h-full w-full items-center justify-center">
                   <Image
                     src={map.splash}
                     alt={map.displayName}
                     width={1000}
                     height={1000}
                     priority
-                    className="block object-cover"
+                    className="h-full w-full rounded-lg object-cover shadow-lg"
                   />
-                  <aside className="absolute bottom-2 left-2 block lg:bottom-10">
+                  <aside className="absolute bottom-10 left-2 md:bottom-2">
                     <h1
-                      className="text-xs font-bold uppercase
-                       text-white md:text-base lg:text-3xl"
+                      className="text-base font-bold uppercase
+                       text-white md:text-3xl"
                     >
                       {map.displayName}
                     </h1>
@@ -51,7 +51,7 @@ const SwiperMaps = () => {
                 </figure>
               </SwiperSlide>
             ))}
-            <div className="slider-controler hidden lg:flex">
+            <div className="slider-controler">
               <div className="swiper-pagination"></div>
             </div>
           </Swiper>
