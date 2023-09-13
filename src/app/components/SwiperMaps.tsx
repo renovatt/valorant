@@ -1,6 +1,8 @@
 'use client'
 import Image from 'next/image'
 import { Fragment } from 'react'
+import Error from './Helpers/Error'
+import Loader from './Helpers/Loader'
 import { useMaps } from '@/hooks/useMaps'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules'
@@ -9,9 +11,9 @@ const SwiperMaps = () => {
   const { data, isError, isLoading } = useMaps()
   return (
     <Fragment>
-      {isError && <p className="text-white">Aconteceu algum erro!</p>}
+      {isError && <Error />}
       {isLoading ? (
-        <p className="border text-white">Carregando..</p>
+        <Loader />
       ) : (
         <section className="animate__fadeIn animate__animated m-auto flex w-full flex-col items-center justify-center px-4 md:h-full">
           <Swiper
