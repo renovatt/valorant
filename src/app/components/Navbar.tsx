@@ -1,4 +1,5 @@
 'use client'
+import Logo from './Logo'
 import RouteLinks from './RouterLinks'
 import { GiCrocSword } from 'react-icons/gi'
 import { RxDashboard } from 'react-icons/rx'
@@ -8,6 +9,7 @@ function Navbar() {
   return (
     <nav className="flex w-full items-center justify-center md:w-auto">
       <ul className="flex h-full w-full flex-col items-center justify-center md:flex-row">
+        <Logo />
         <RouteLinks href="/" icon={RxDashboard} text="Inicio" />
         <RouteLinks
           href="/views/agents"

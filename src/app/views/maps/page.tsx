@@ -1,5 +1,15 @@
-import MapsPage from '@/app/components/MapsPage'
+import ViewContainer from '@/app/components/Containers/ViewContainer'
+import ViewContent from '@/app/components/Containers/ViewContent'
+import SwiperMaps from '@/app/components/SwiperMaps'
+import Title from '@/app/components/Tiltle'
 
 export default function Maps() {
-  return <MapsPage />
+  return (
+    <ViewContainer>
+      <Title title="Mapas" />
+      <ViewContent>
+        <SwiperMaps />
+      </ViewContent>
+    </ViewContainer>
+  )
 }

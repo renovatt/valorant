@@ -1,11 +1,11 @@
 'use client'
 import Image from 'next/image'
-import { useState } from 'react'
 import { MobileModalProps } from '@/@types'
 import { useVoice } from '@/hooks/useVoice'
 import { BsPlayCircle } from 'react-icons/bs'
 import { TiArrowBackOutline } from 'react-icons/ti'
 import { useRouter } from 'next/navigation'
+import { useAbility } from '@/hooks/useAbility'
 
 const MobileModal = ({
   displayName,
@@ -16,15 +16,7 @@ const MobileModal = ({
   voiceLine,
 }: MobileModalProps) => {
   const { handleVoiceAngent } = useVoice(voiceLine)
-  const [activeAbilityIndex, setActiveAbilityIndex] = useState(-1)
-
-  const toggleAbilityDescription = (index: number) => {
-    if (activeAbilityIndex === index) {
-      setActiveAbilityIndex(-1)
-    } else {
-      setActiveAbilityIndex(index)
-    }
-  }
+  const { activeAbilityIndex, toggleAbility } = useAbility()
 
   const router = useRouter()
   const backToAgents = () => {
@@ -119,7 +111,7 @@ const MobileModal = ({
                 abilities.displayIcon && (
                   <section
                     key={index}
-                    onClick={() => toggleAbilityDescription(index)}
+                    onClick={() => toggleAbility(index)}
                     className={`${
                       activeAbilityIndex === index ? 'h-full' : 'h-16'
                     } my-1 flex min-h-[5rem] w-full flex-col items-start justify-center rounded-lg bg-primary-400 p-2 shadow-lg`}

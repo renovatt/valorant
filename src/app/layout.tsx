@@ -4,18 +4,12 @@ import 'swiper/css/navigation'
 import 'animate.css'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import Container from './components/Container'
 import Header from './components/Header'
-import ReactQueryProvider from './components/Providers/ReactQueryProvider'
+import Footer from './components/Footer'
+import { Inter } from 'next/font/google'
+import Container from './components/Containers/Container'
 import { AosProvider } from './components/Providers/AosProvider'
-// import localFont from 'next/font/local'
-
-// const myFont = localFont({
-//   src: '/valorant.ttf',
-//   display: 'swap',
-//   variable: '--font-valorant',
-// })
+import ReactQueryProvider from './components/Providers/ReactQueryProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -30,13 +24,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="pt-br">
       <body className={inter.className}>
         <ReactQueryProvider>
           <AosProvider>
             <Container>
               <Header />
               {children}
+              <Footer />
             </Container>
           </AosProvider>
         </ReactQueryProvider>

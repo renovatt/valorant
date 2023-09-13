@@ -32,3 +32,13 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+https://cdn.dribbble.com/users/2991/screenshots/13405644/media/ed8eba008782b0b7c3e6ca9b9f5e50ab.mp4
+
+// import localFont from 'next/font/local'
+
+// const myFont = localFont({
+//   src: '/valorant.ttf',
+//   display: 'swap',
+//   variable: '--font-valorant',
+// })

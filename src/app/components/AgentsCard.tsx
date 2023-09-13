@@ -1,5 +1,4 @@
 'use client'
-
 import Image from 'next/image'
 import { AgentsCardProps } from '@/@types'
 import { useRouter } from 'next/navigation'

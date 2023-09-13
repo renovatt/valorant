@@ -3,8 +3,8 @@ import DesktopModal from './DesktopModal'
 import { useRouter } from 'next/navigation'
 import { AgentModalProps } from '@/@types'
 import MobileModal from './MobileModal'
-import ModalContainer from './ModalContainer'
 import { TiArrowBackOutline } from 'react-icons/ti'
+import ModalContainer from './Containers/ModalContainer'
 
 const AgentModal = ({
   displayName,
