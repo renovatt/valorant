@@ -10,11 +10,7 @@ export async function generateStaticParams() {
   }))
 }
 
-export default async function Project({
-  params,
-}: {
-  params: { uuid: string }
-}) {
+export default async function Agent({ params }: { params: { uuid: string } }) {
   const agent = await handleAgentsById(params.uuid)
   return <AgentModal {...agent} />
 }
