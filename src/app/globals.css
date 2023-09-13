@@ -82,15 +82,43 @@ body {
   }
 
   .bg-gradient-mobile-modal{
-    background: linear-gradient(283deg, rgba(255,62,72,1) 17%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(
+      283deg, rgba(255,62,72,1) 17%, 
+      rgba(255,255,255,0) 100%
+    );
   }
 
   .bg-gradient-weapon-card{
-    background: linear-gradient(283deg, rgba(28,29,26,0.9149159663865546) 0%, rgba(41,42,39,0.9401260504201681) 100%);
+  /*
+      background: linear-gradient(
+      283deg, 
+      rgba(28,29,26,0.9149159663865546) 0%, 
+      rgba(41,42,39,0.9401260504201681) 100%
+    );
+  */
     
     background: linear-gradient(
-      23deg, rgba(255,62,72,0.7272408963585435) 0%, rgba(28,29,26,0.7216386554621849) 53%);
-    
+      23deg, 
+      rgba(255,62,72,0.7272408963585435) 0%, 
+      rgba(28,29,26,0.7216386554621849) 53%
+    );
+  }
+
+  .reflection{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-box-reflect: below 0 linear-gradient(
+    transparent, rgba(0, 0, 0, 0.5)
+    );
+  }
+
+  .center-absolute{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
