@@ -1,16 +1,17 @@
+import { Agent, Maps, Weapons } from '@/@types'
+
 const AGENTS_URL =
   'https://valorant-api.com/v1/agents?isPlayableCharacter=true&language=pt-BR'
 const WEAPONS_URL = 'https://valorant-api.com/v1/weapons?language=pt-BR'
-const GEAR_URL = 'https://valorant-api.com/v1/gear?language=pt-BR'
 const MAPS_URL = 'https://valorant-api.com/v1/maps?language=pt-BR'
 
-export const handleGetAgents = async () => {
+export const handleGetAgents = async (): Promise<Agent[]> => {
   const response = await fetch(AGENTS_URL)
   const json = await response.json()
   return json.data
 }
 
-export const handleGetWeapons = async () => {
+export const handleGetWeapons = async (): Promise<Weapons[] | undefined> => {
   const response = await fetch(WEAPONS_URL)
   if (response.ok) {
     const json = await response.json()
@@ -18,15 +19,7 @@ export const handleGetWeapons = async () => {
   }
 }
 
-export const handleGetGear = async () => {
-  const response = await fetch(GEAR_URL)
-  if (response.ok) {
-    const json = await response.json()
-    return json.data
-  }
-}
-
-export const handleGetMaps = async () => {
+export const handleGetMaps = async (): Promise<Maps[] | undefined> => {
   const response = await fetch(MAPS_URL)
   if (response.ok) {
     const json = await response.json()
@@ -34,7 +27,9 @@ export const handleGetMaps = async () => {
   }
 }
 
-export const handleAgentsById = async (id: string) => {
+export const handleAgentsById = async (
+  id: string,
+): Promise<Agent | undefined> => {
   const response = await fetch(
     `https://valorant-api.com/v1/agents/${id}?isPlayableCharacter=true&language=pt-BR`,
   )

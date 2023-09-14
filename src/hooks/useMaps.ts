@@ -3,7 +3,7 @@ import { handleGetMaps } from '@/services'
 import { useQuery } from '@tanstack/react-query'
 
 export const useMaps = () => {
-  const { data, isLoading, error, isError } = useQuery<Maps[]>({
+  const { data, isLoading, error, isError } = useQuery<Maps[] | undefined>({
     queryKey: ['maps'],
     queryFn: () => handleGetMaps(),
   })
