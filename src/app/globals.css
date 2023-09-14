@@ -120,6 +120,20 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  .bg-prev-btn{
+    background: linear-gradient(
+    274deg, rgba(255,62,72,0) 0%, 
+    rgba(28,29,26,0.290266106442577) 53%
+    );
+  }
+
+  .bg-next-btn{
+    background: linear-gradient(
+    90deg, rgba(255,62,72,0) 0%, 
+    rgba(28,29,26,0.290266106442577) 53%
+    );
+  }
 }
 
 html{
