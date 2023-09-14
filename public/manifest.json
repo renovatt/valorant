@@ -1,0 +1,32 @@
+{
+    "theme_color": "#1f2333",
+    "background_color": "#1f2333",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "short_name": "Valorant",
+    "description": "Explore um rico universo de informa\u00e7\u00f5es sobre o jogo Valorant neste website dedicado. Encontre detalhes minuciosos sobre os personagens, armas e suas cole\u00e7\u00f5es de skins, bem como mapas estrat\u00e9gicos. Desenvolvi esta aplica\u00e7\u00e3o como entusiasta do jogo, com um design cuidadosamente elaborado para fornecer uma experi\u00eancia informativa e envolvente. Satisfa\u00e7a sua curiosidade sobre Valorant aqui!",
+    "name": "Valorant",
+    "icons": [
+        {
+            "src": "/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
