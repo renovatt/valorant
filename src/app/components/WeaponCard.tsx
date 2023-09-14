@@ -1,6 +1,10 @@
+'use client'
 import Image from 'next/image'
 import { WeaponsCardProps } from '@/@types'
 import { TfiTarget } from 'react-icons/tfi'
+import { SiRiotgames } from 'react-icons/si'
+import { useSKins } from '@/hooks/useSkins'
+import NextAndPrevButtons from './NextAndPrevButtons'
 
 const WeaponsCard = ({
   displayName,
@@ -16,9 +20,18 @@ const WeaponsCard = ({
     backgroundReteat: 'no-repeat',
     backgroundPosition: 'center',
   }
+
+  const {
+    rerender,
+    skinsQuantity,
+    currentSkinImage,
+    handleSkinError,
+    handleWeaponNextSkin,
+    handleWeaponPrevSkin,
+  } = useSKins(skins ?? [], displayIcon ?? '')
+
   return (
-    <section className="animate__animated animate__fadeIn bg-gradient-card relative m-2 flex h-44 w-72 items-center justify-center rounded-lg p-1 md:h-52 md:w-96">
-      {/* <div className="absolute left-10 z-10 h-20 w-20 rounded-full border-2 md:left-24 md:h-28 md:w-28 md:border-4"></div> */}
+    <section className="animate__animated animate__fadeIn bg-gradient-card relative m-2 flex h-44 w-72 items-center justify-center rounded-lg md:h-52 md:w-96">
       <div
         style={sectionStyle}
         className="absolute bottom-0 h-full w-full opacity-10"
@@ -41,21 +54,26 @@ const WeaponsCard = ({
           </section>
         </section>
 
-        <figure className="absolute left-0 z-20 h-8 rotate-12 pl-1 md:h-14">
+        <figure className="absolute left-0 h-8 rotate-12 pl-1 md:h-14">
           <Image
-            src={displayIcon ?? ''}
+            src={currentSkinImage ?? ''}
             alt={displayName ?? ''}
             width={300}
             height={300}
             priority
-            className="h-full w-full object-cover"
+            onError={handleSkinError}
+            className={`h-full w-full ${
+              rerender ? 'animate-fadeRight' : ''
+            } object-cover`}
           />
         </figure>
-        {/*  */}
-        <section
-          className="flex h-full flex-col items-start justify-start gap-5
-      "
-        >
+
+        <NextAndPrevButtons
+          handleWeaponNextSkin={handleWeaponNextSkin}
+          handleWeaponPrevSkin={handleWeaponPrevSkin}
+        />
+
+        <section className="pointer-events-none relative flex h-full flex-col items-start justify-start gap-5">
           <aside className="flex flex-col items-start justify-center">
             <span className="flex items-center justify-center text-[6px] uppercase text-white md:text-[8px]">
               <span className="pr-1 text-red-600">{'//'}</span>Estatísticas
@@ -155,6 +173,16 @@ const WeaponsCard = ({
               </article>
             </section>
           </aside>
+
+          <section className="absolute bottom-0 right-0 flex flex-col items-start justify-center">
+            <span className="flex items-center justify-center text-[6px] uppercase text-white md:text-[8px]">
+              <span className="pr-1 text-red-600">{'//'}</span>Skins
+            </span>
+            <span className="flex items-center justify-center gap-2 text-base font-semibold text-white md:text-xl">
+              <SiRiotgames className="h-4 w-4 font-bold" />
+              {skinsQuantity}
+            </span>
+          </section>
         </section>
       </article>
     </section>
