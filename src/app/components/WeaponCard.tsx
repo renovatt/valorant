@@ -34,10 +34,10 @@ const WeaponsCard = ({
     <section className="animate__animated animate__fadeIn bg-gradient-card relative m-2 flex h-44 w-72 items-center justify-center rounded-lg md:h-52 md:w-96">
       <div
         style={sectionStyle}
-        className="absolute bottom-0 h-full w-full opacity-10"
+        className="absolute bottom-0 h-full w-full rounded-lg opacity-10"
       ></div>
 
-      <article className="relative flex h-full w-full items-center justify-between p-2">
+      <article className="relative flex h-full w-full items-center justify-between rounded-lg p-2">
         <section className="flex h-full flex-col items-start justify-between">
           <h1 className="text-base font-bold uppercase text-white md:text-2xl">
             {displayName}

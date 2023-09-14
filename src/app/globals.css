@@ -4,6 +4,7 @@
 
 :root {
   --bg-default: #151929;
+  --theme-color: #ff3e48;
 }
 
 *{
@@ -151,4 +152,15 @@ html{
 
 body {
   background: var(--bg-default);
+}
+
+.swiper-theme-color,
+.swiper-button-prev,
+.swiper-button-next{
+  color: var(--theme-color);
+}
+
+
+.swiper-pagination-bullet-active {
+  background: var(--theme-color);
 }
