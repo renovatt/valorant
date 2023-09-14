@@ -60,7 +60,7 @@ const AgentsCard = ({
                       alt={displayName ?? ''}
                       width={100}
                       height={100}
-                      className="h-4 w-4"
+                      className="h-4 w-4 animate-fade"
                     />
                   </figure>
                 ),
