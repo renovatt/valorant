@@ -37,12 +37,14 @@
 ![Mobile 2](./public/mobile-2.png)
 ![Mobile 3](./public/mobile-3.png)
 ![Mobile 4](./public/mobile-4.png)
+![Mobile 4](./public/mobile-5.png)
 
 ## Layout web
 ![Web 1](./public/web-1.png) 
 ![Web 2](./public/web-2.png)
 ![Web 3](./public/web-3.png)
 ![Web 4](./public/web-4.png)
+![Web 4](./public/web-5.png)
 
 ## 🛠️ Tecnologias
 
