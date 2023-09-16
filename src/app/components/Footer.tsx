@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className="absolute bottom-0 right-0 hidden h-10 w-full items-center justify-end md:flex">
       <span className="flex items-center justify-center text-xs text-primary-800">
         <AiOutlineCopyright className="h-4 w-4" />
-        <span className="hidden md:flex">Desenvolvido por</span>
+        <span className="hidden md:flex">Powered by</span>
       </span>
       <Link
         className="flex items-center justify-center text-xs font-semibold text-primary-800 transition-all ease-in hover:text-white"
