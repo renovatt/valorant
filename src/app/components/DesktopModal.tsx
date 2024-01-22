@@ -4,6 +4,7 @@ import useSkillStore from '@/store'
 import { BsPlayCircle } from 'react-icons/bs'
 import { useVoice } from '@/hooks/useVoice'
 import { DesktopModalProps } from '@/@types'
+import { useEffect } from 'react'
 
 const DesktopModal = ({
   displayName,
@@ -15,10 +16,16 @@ const DesktopModal = ({
   voiceLine,
 }: DesktopModalProps) => {
   const { handleVoiceAngent } = useVoice(voiceLine)
-  const { status, setStatus, clearStatus } = useSkillStore()
+  const { status, setStatus } = useSkillStore()
 
   const hoveredSkill = abilities?.find(
     (ability) => ability.displayName === status.skillName,
+  )
+
+  const firstAbility = abilities?.find((ability) => ability.slot === 'Ability1')
+
+  const selectedAbility = abilities?.find(
+    (ability) => ability.slot === hoveredSkill?.slot,
   )
 
   const backgroundImageUrl = `${background}`
@@ -28,6 +35,12 @@ const DesktopModal = ({
     backgroundReteat: 'no-repeat',
     backgroundPosition: 'center',
   }
+
+  useEffect(() => {
+    if (firstAbility) {
+      setStatus(firstAbility.displayName)
+    }
+  }, [firstAbility, setStatus])
 
   return (
     <section
@@ -107,9 +120,11 @@ const DesktopModal = ({
                   abilities.displayIcon && (
                     <figure
                       key={index}
-                      className="flex opacity-60 transition-all ease-in-out hover:cursor-pointer hover:opacity-100"
-                      onMouseOut={clearStatus}
-                      onMouseOver={() => setStatus(abilities.displayName)}
+                      className={`flex opacity-60 transition-all ease-in-out hover:cursor-pointer hover:opacity-100 ${
+                        selectedAbility?.displayName ===
+                          abilities.displayName && 'opacity-100'
+                      }`}
+                      onClick={() => setStatus(abilities.displayName)}
                     >
                       <Image
                         src={abilities.displayIcon}
@@ -122,9 +137,13 @@ const DesktopModal = ({
                   ),
               )}
             </article>
-            {hoveredSkill?.description && (
+            {hoveredSkill?.description ? (
               <p className="inline-block animate-fade px-2 text-xs text-white">
                 {hoveredSkill?.description}
+              </p>
+            ) : (
+              <p className="inline-block animate-fade px-2 text-xs text-white">
+                {firstAbility?.description}
               </p>
             )}
           </section>
