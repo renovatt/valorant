@@ -9,7 +9,7 @@ const ModalContainer = ({ children }: ModalContainerProps) => {
     backgroundPosition: 'center',
   }
   return (
-    <section className="lg:bg-gradient-modal-container relative m-auto flex h-[80%] w-[80%] flex-col items-center justify-center rounded-lg bg-primary-400 shadow-xl shadow-zinc-950 md:h-[80%]">
+    <section className="lg:bg-gradient-modal-container relative z-50 m-auto flex h-[80%] w-[80%] flex-col items-center justify-center rounded-lg bg-primary-400 shadow-xl shadow-zinc-950 md:h-[80%]">
       <div
         style={sectionStyle}
         className="absolute bottom-0 h-full w-full rounded-lg  opacity-10"

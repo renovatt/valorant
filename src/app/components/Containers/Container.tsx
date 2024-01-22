@@ -15,7 +15,7 @@ const Container = ({ children }: ContainerTypeProps) => {
       style={sectionStyle}
       className="flex min-h-screen flex-1 flex-col items-center justify-center bg-transparent"
     >
-      <section className="bg-gradient-container relative flex h-[90vh] w-[90%] items-center justify-center overflow-hidden rounded-lg shadow-2xl">
+      <section className="bg-gradient-container relative flex h-screen w-full items-center justify-center overflow-hidden shadow-2xl md:h-[90vh]  md:w-[90%] md:rounded-lg">
         {children}
       </section>
     </main>

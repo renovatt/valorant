@@ -15,7 +15,7 @@ const SwiperMaps = () => {
       {isLoading ? (
         <Loader />
       ) : (
-        <section className="animate__fadeIn animate__animated flex h-full w-[80%] items-center justify-center md:h-full">
+        <section className="animate__fadeIn animate__animated flex h-full w-full items-center justify-center md:h-full md:w-[80%]">
           <Swiper
             grabCursor={true}
             centeredSlides={true}

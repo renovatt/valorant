@@ -8,8 +8,10 @@ import { LiaIdCardAltSolid, LiaMapSolid } from 'react-icons/lia'
 function Navbar() {
   return (
     <nav className="flex w-full items-center justify-center md:w-auto">
-      <ul className="flex h-full w-full flex-col items-center justify-center md:flex-row">
-        <Logo />
+      <ul className="flex h-full w-full items-center justify-around px-2">
+        <div className="hidden md:flex">
+          <Logo />
+        </div>
         <RouteLinks href="/" icon={RxDashboard} text="Inicio" />
         <RouteLinks
           href="/views/agents"

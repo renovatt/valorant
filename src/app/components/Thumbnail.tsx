@@ -11,7 +11,7 @@ const Thumbnail = () => {
     event.currentTarget.style.opacity = '1'
   }
   return (
-    <section className="bg-gradient-weapon-card animate__fadeIn animate__animated relative flex h-full w-[80%] items-center justify-center rounded-lg md:h-full md:w-[90%]">
+    <section className="bg-gradient-weapon-card animate__fadeIn animate__animated relative flex h-full w-[100%] items-center justify-center rounded-lg md:h-full md:w-[90%]">
       <Image
         src={logo}
         alt="valorant-logo"
@@ -30,7 +30,7 @@ const Thumbnail = () => {
 
       <Link
         href={'/views/agents'}
-        className="center-absolute z-50 w-[90%] max-w-xs border-2 border-primary-700 py-2 text-center text-2xl uppercase text-primary-700 transition-all
+        className="center-absolute z-30 w-[90%] max-w-xs border-2 border-primary-700 py-2 text-center text-2xl uppercase text-primary-700 transition-all
       ease-in-out hover:border-white hover:text-white"
       >
         Eliminar

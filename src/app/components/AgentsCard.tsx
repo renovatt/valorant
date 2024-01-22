@@ -44,7 +44,7 @@ const AgentsCard = ({
         </figure>
 
         <article
-          className="pointer-events-none absolute z-50 flex h-full
+          className="pointer-events-none absolute z-30 flex h-full
        w-full flex-col items-center justify-end pb-3"
         >
           <h1 className="my-1 text-base font-semibold uppercase text-white shadow-black drop-shadow-lg lg:text-xl">

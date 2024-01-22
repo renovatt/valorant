@@ -3,8 +3,8 @@ import { ViewContentProps } from '@/@types'
 const ViewContent = ({ children }: ViewContentProps) => {
   return (
     <section
-      className="flex h-full w-full items-start justify-end
-       overflow-auto md:justify-center"
+      className="mb-20 flex h-full w-full items-start justify-center
+       overflow-auto md:m-0"
     >
       {children}
     </section>

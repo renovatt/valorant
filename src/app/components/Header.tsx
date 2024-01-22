@@ -1,11 +1,11 @@
 import Navbar from './Navbar'
-import SocialLinks from './SocialLinks'
+// import SocialLinks from './SocialLinks'
 
 function Header() {
   return (
-    <header className="absolute left-0 top-0 flex h-full w-20 flex-col items-center justify-between overflow-hidden md:h-20 md:w-full md:flex-row md:p-0">
+    <header className="bg-gradient-container absolute bottom-0 left-0 z-50 flex h-20 w-full flex-row items-center justify-between overflow-hidden md:top-0 md:flex-col md:items-start md:bg-none md:p-0">
       <Navbar />
-      <SocialLinks />
+      {/* <SocialLinks /> */}
     </header>
   )
 }
