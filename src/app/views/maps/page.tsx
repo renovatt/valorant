@@ -1,6 +1,6 @@
 import ViewContainer from '@/app/components/Containers/ViewContainer'
 import ViewContent from '@/app/components/Containers/ViewContent'
-import LogoAndTitle from '@/app/components/LogoAndTitle'
+import LogoandTitle from '@/app/components/LogoandTitle'
 import SwiperMaps from '@/app/components/SwiperMaps'
 import { Metadata } from 'next'
 
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function Maps() {
   return (
     <ViewContainer>
-      <LogoAndTitle title="Mapas" />
+      <LogoandTitle title="Mapas" />
       <ViewContent>
         <SwiperMaps />
       </ViewContent>

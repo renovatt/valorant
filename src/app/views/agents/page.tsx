@@ -1,7 +1,7 @@
 import ViewContainer from '@/app/components/Containers/ViewContainer'
 import ViewContent from '@/app/components/Containers/ViewContent'
 import GridAgents from '@/app/components/GridAgents'
-import LogoAndTitle from '@/app/components/LogoAndTitle'
+import LogoandTitle from '@/app/components/LogoandTitle'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function Agents() {
   return (
     <ViewContainer>
-      <LogoAndTitle title="Agentes" />
+      <LogoandTitle title="Agentes" />
       <ViewContent>
         <GridAgents />
       </ViewContent>
