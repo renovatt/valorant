@@ -18,15 +18,11 @@ const DesktopModal = ({
   const { handleVoiceAngent } = useVoice(voiceLine)
   const { status, setStatus } = useSkillStore()
 
-  const hoveredSkill = abilities?.find(
+  const selectedAbility = abilities?.find(
     (ability) => ability.displayName === status.skillName,
   )
 
   const firstAbility = abilities?.find((ability) => ability.slot === 'Ability1')
-
-  const selectedAbility = abilities?.find(
-    (ability) => ability.slot === hoveredSkill?.slot,
-  )
 
   const backgroundImageUrl = `${background}`
   const sectionStyle = {
@@ -120,9 +116,10 @@ const DesktopModal = ({
                   abilities.displayIcon && (
                     <figure
                       key={index}
-                      className={`flex opacity-60 transition-all ease-in-out hover:cursor-pointer hover:opacity-100 ${
+                      className={`flex w-12 opacity-60 transition-all ease-in-out hover:cursor-pointer hover:opacity-100 ${
                         selectedAbility?.displayName ===
-                          abilities.displayName && 'opacity-100'
+                          abilities.displayName &&
+                        ' border border-white opacity-100'
                       }`}
                       onClick={() => setStatus(abilities.displayName)}
                     >
@@ -131,19 +128,18 @@ const DesktopModal = ({
                         alt={displayName ?? ''}
                         width={100}
                         height={100}
-                        className="h-12 w-12 p-1"
+                        className="h-12 w-12 p-1 text-primary-700"
                       />
                     </figure>
                   ),
               )}
             </article>
-            {hoveredSkill?.description ? (
-              <p className="inline-block animate-fade px-2 text-xs text-white">
-                {hoveredSkill?.description}
-              </p>
-            ) : (
-              <p className="inline-block animate-fade px-2 text-xs text-white">
-                {firstAbility?.description}
+            {selectedAbility?.description && (
+              <p className="flex animate-fade flex-col items-start justify-start overflow-y-auto px-2 text-xs font-bold text-white">
+                {selectedAbility?.displayName}
+                <span className="flex animate-fade flex-col items-start justify-center text-xs font-normal text-white">
+                  {selectedAbility?.description}
+                </span>
               </p>
             )}
           </section>
