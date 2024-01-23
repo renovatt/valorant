@@ -22,9 +22,12 @@ const WeaponsCard = ({
   }
 
   const {
+    loadingImage,
+    imageLoaded,
     rerender,
     skinsQuantity,
     currentSkinImage,
+    handleImageLoad,
     handleSkinError,
     handleWeaponNextSkin,
     handleWeaponPrevSkin,
@@ -55,17 +58,30 @@ const WeaponsCard = ({
         </section>
 
         <figure className="absolute left-0 h-8 rotate-12 pl-1 md:h-14">
-          <Image
-            src={currentSkinImage ?? ''}
-            alt={displayName ?? ''}
-            width={300}
-            height={300}
-            priority
-            onError={handleSkinError}
-            className={`h-full w-full ${
-              rerender ? 'animate-fadeRight' : ''
-            } object-cover`}
-          />
+          {imageLoaded ? (
+            <Image
+              src={imageLoaded ? currentSkinImage : loadingImage}
+              alt={displayName ?? ''}
+              width={300}
+              height={300}
+              priority
+              onError={handleSkinError}
+              onLoad={handleImageLoad}
+              className={`h-full w-full ${
+                rerender ? 'animate-fadeRight' : ''
+              } object-cover`}
+            />
+          ) : (
+            <Image
+              src={loadingImage}
+              alt={displayName ?? ''}
+              width={300}
+              height={300}
+              priority
+              onError={handleSkinError}
+              className="relative h-full w-full animate-pulse object-cover"
+            />
+          )}
         </figure>
 
         <NextAndPrevButtons

@@ -55,10 +55,19 @@ module.exports = {
           transform: 'translateX(0px)',
         },
       },
+      pulse: {
+        '0%, 100%': {
+          opacity: '1',
+        },
+        '50%': {
+          opacity: '.5',
+        },
+      },
     },
     animation: {
       fade: 'fade .2s forwards',
       fadeRight: 'fadeRight .6s forwards',
+      pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
     },
   },
   plugins: [],
